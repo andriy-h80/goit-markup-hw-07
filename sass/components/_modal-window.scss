@@ -220,6 +220,11 @@ textarea{
   margin: 10px 0; 
 } 
 
+.checkbox-agree { 
+    display: flex; 
+    align-items: center; 
+} 
+
 .checkbox-agree .icon-wrapper { 
   width: 16px; 
   height: 15px; 
@@ -229,18 +234,22 @@ textarea{
   display: flex; 
   align-items: center; 
   justify-content: center; 
-} 
+}
+
 .checkbox-agree .agree-icon { 
   fill: transparent; 
-} 
+}
+
 .check-line input:checked + .checkbox-agree .icon-wrapper { 
   background-color: #2196f3; 
   border: none; 
-} 
+}
+
 .check-line input:checked + .checkbox-agree .agree-icon { 
   fill: #ffffff; 
-} 
+}
+
 .link-contract { 
   color: #2196f3; 
   margin-left: 5px; 
-} 
+}

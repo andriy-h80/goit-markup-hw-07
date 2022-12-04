@@ -408,7 +408,6 @@ li {
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  /* font-style: 12px; */
   font-weight: bold;
   outline: none;
   -webkit-transition-duration: 250ms;
@@ -419,8 +418,7 @@ li {
 .form__input:hover, .form__input:focus {
   border-color: var(--hover-color);
 }
-
-.form-input:hover + .form__icon {
+.form__input:hover + .form__icon {
   fill: var(--hover-color);
 }
 
@@ -453,6 +451,86 @@ textarea {
 }
 textarea:hover {
   border-color: var(--hover-color);
+}
+
+.contract {
+  color: var(--hover-color);
+  position: relative;
+}
+
+.contract::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  background-color: var(--hover-color);
+}
+
+.modal-button {
+  margin: auto;
+  margin-top: 30px;
+  padding: 10px 52px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  background-color: var(--hover-color);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.check-line {
+  margin: 10px 0;
+}
+
+.checkbox-agree .icon-wrapper {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  margin-right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.checkbox-agree .agree-icon {
+  fill: transparent;
+}
+
+.check-line input:checked + .checkbox-agree .icon-wrapper {
+  background-color: #2196f3;
+  border: none;
+}
+
+.check-line input:checked + .checkbox-agree .agree-icon {
+  fill: #ffffff;
+}
+
+.link-contract {
+  color: #2196f3;
+  margin-left: 5px;
 }
 
 .advantage__name:not(:last-child) {
