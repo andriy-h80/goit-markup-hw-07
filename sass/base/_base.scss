@@ -1,0 +1,88 @@
+
+.body{
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  background-color: var(--white-color);
+}
+  
+a{
+  text-decoration: none;
+}
+  
+address{
+  display: inline-block;
+  font-style: normal;
+}
+  
+img{
+  display: block;
+}
+  
+header > a{
+  color: var(--text-color);
+}
+  
+a:hover,
+a:focus{
+  color: var(--hover-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+  
+ul{
+  padding: 0;
+}
+  
+li{
+  list-style: none;
+}
+  
+.container{
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.secondary-title{
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--name-color);
+}
+
+.title-name{
+  display: block;
+  margin-bottom: 50px;
+}
+
+.section-name{
+  padding-top: 0;
+}
+
+.action{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.advantage,
+.work,
+.team,
+.clients{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
