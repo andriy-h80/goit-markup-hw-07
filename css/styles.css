@@ -637,7 +637,6 @@ textarea:hover{
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  
 }
 
 .checkbox-input:checked + .checkbox-terms{

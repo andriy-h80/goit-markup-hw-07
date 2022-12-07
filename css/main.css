@@ -361,6 +361,12 @@ li {
   fill: var(--hover-color);
 }
 
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
 .form {
   margin-left: auto;
   margin-right: auto;
@@ -498,6 +504,19 @@ textarea:hover {
   margin: 10px 0;
 }
 
+.checkbox-agree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icon-wrapper {
+  display: inline-block;
+}
+
 .checkbox-agree .icon-wrapper {
   width: 16px;
   height: 15px;
@@ -513,6 +532,7 @@ textarea:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-image: url(../../images/icons.svg#icon-check);
 }
 
 .checkbox-agree .agree-icon {

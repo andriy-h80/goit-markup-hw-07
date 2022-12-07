@@ -46,6 +46,12 @@
     fill: var(--hover-color);
 }
 
+.close-button{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
 .form{
     margin-left: auto;
     margin-right: auto;
@@ -133,8 +139,11 @@ textarea{
     }
 }
 
+//
+//
 // .checkbox{
 //     position: relative;
+//     margin: 10px 0; 
 // }
   
 // .checkbox-input{
@@ -178,7 +187,36 @@ textarea{
 //     letter-spacing: 0.03em;
 //     padding-left: 36.38px;
 // }
-  
+
+// .terms .icon-wrapper{
+//     width: 16px;
+//     height: 15px;
+//     border: 2px solid #212121; 
+//     border-radius: 2px; 
+//     margin-right: 8px; 
+//     display: flex; 
+//     align-items: center; 
+//     justify-content: center;
+//     background-image: url(../../images/icons.svg#icon-check);
+// }
+
+// .terms .checkbox-terms{
+//     fill: transparent; 
+// }
+
+// .checkbox input:checked + .terms .icon-wrapper{
+//     background-color: #2196f3; 
+//     border: none; 
+// }
+
+// .checkbox input:checked + .terms .checkbox-terms{
+//     fill: #ffffff; 
+// }
+
+
+
+//  
+
 .contract{
     color: var(--hover-color);
     position: relative;
@@ -215,17 +253,21 @@ textarea{
     cursor: pointer;
 }
 
-
-.check-line { 
+//
+.check-line{ 
   margin: 10px 0; 
 } 
 
-.checkbox-agree { 
+.checkbox-agree{ 
     display: flex; 
     align-items: center; 
 } 
 
-.checkbox-agree .icon-wrapper { 
+.icon-wrapper{
+    display: inline-block;
+}
+
+.checkbox-agree .icon-wrapper{ 
   width: 16px; 
   height: 15px; 
   border: 2px solid #212121; 
@@ -233,23 +275,24 @@ textarea{
   margin-right: 8px; 
   display: flex; 
   align-items: center; 
-  justify-content: center; 
+  justify-content: center;
+  background-image: url(../../images/icons.svg#icon-check);
 }
 
-.checkbox-agree .agree-icon { 
+.checkbox-agree .agree-icon{ 
   fill: transparent; 
 }
 
-.check-line input:checked + .checkbox-agree .icon-wrapper { 
+.check-line input:checked + .checkbox-agree .icon-wrapper{ 
   background-color: #2196f3; 
   border: none; 
 }
 
-.check-line input:checked + .checkbox-agree .agree-icon { 
+.check-line input:checked + .checkbox-agree .agree-icon{ 
   fill: #ffffff; 
 }
 
-.link-contract { 
+.link-contract{ 
   color: #2196f3; 
   margin-left: 5px; 
 }
