@@ -28,28 +28,40 @@
   
 .close{
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 0px;
+    right: 0px;
     width: 30px;
     height: 30px;
     fill: var(--name-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    background-image: url(../images/Close-X.svg);
     padding: 6px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     cursor: pointer;
-}
-  
-.close:hover{
-    fill: var(--hover-color);
+
+    &:hover{
+    background-image: url(../images/Close-X-hover.svg);
+    // fill: var(--hover-color);
+    }
 }
 
 .close-button{
-    position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 8px; 
+    right: 8px; 
+    position: fixed; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    min-width: 30px; 
+    min-height: 30px; 
+    fill: currentColor; 
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    background-color: #ffffff; 
+    border-radius: 50%; 
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form{
@@ -139,87 +151,10 @@ textarea{
     }
 }
 
-//
-//
-// .checkbox{
-//     position: relative;
-//     margin: 10px 0; 
-// }
-  
-// .checkbox-input{
-//     position: absolute;
-//     width: 1px;
-//     height: 1px;
-//     margin: -1px;
-//     border: 0;
-//     padding: 0;
-//     white-space: nowrap; 
-//     clip-path: inset(100%); 
-//     clip: rect(0 0 0 0);
-//     overflow: hidden;
-// }
-  
-// .checkbox-terms{
-//     position: absolute;
-//     width: 16px;
-//     height: 15px;
-//     left: 12px;
-//     top: 50%;
-//     transform: translateY(-50%);
-// }
-  
-// .checkbox-input:checked + .checkbox-terms{
-//     background-image: url(/images/icon-check.svg);
-//     background-color: var(--hover-color);
-//     fill: var(--hover-color);
-//     background-size: contain;
-//     border-color: transparent;
-//     background-origin: border-box;
-// }
-  
-// .terms{
-//     display: flex; 
-//     align-items: center; 
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 14px;
-//     line-height: 1.71;
-//     letter-spacing: 0.03em;
-//     padding-left: 36.38px;
-// }
-
-// .terms .icon-wrapper{
-//     width: 16px;
-//     height: 15px;
-//     border: 2px solid #212121; 
-//     border-radius: 2px; 
-//     margin-right: 8px; 
-//     display: flex; 
-//     align-items: center; 
-//     justify-content: center;
-//     background-image: url(../../images/icons.svg#icon-check);
-// }
-
-// .terms .checkbox-terms{
-//     fill: transparent; 
-// }
-
-// .checkbox input:checked + .terms .icon-wrapper{
-//     background-color: #2196f3; 
-//     border: none; 
-// }
-
-// .checkbox input:checked + .terms .checkbox-terms{
-//     fill: #ffffff; 
-// }
-
-
-
-//  
-
 .contract{
     color: var(--hover-color);
     position: relative;
+    margin-left: 5px; 
 }
   
 .contract::before{
@@ -229,7 +164,7 @@ textarea{
     height: 1px;
     position: absolute;
     right: 0;
-    bottom: 2px;
+    bottom: 6px;
     background-color: var(--hover-color);
 }
   
@@ -253,7 +188,6 @@ textarea{
     cursor: pointer;
 }
 
-//
 .check-line{ 
   margin: 10px 0; 
 } 
@@ -261,38 +195,50 @@ textarea{
 .checkbox-agree{ 
     display: flex; 
     align-items: center; 
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    padding-left: 12px;
 } 
 
-.icon-wrapper{
-    display: inline-block;
+.checkbox-agree .icon-wrapper{ 
+    width: 16px; 
+    height: 15px; 
+    border: 2px solid #212121; 
+    border-radius: 2px; 
+    margin-right: 8px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
 }
 
-.checkbox-agree .icon-wrapper{ 
-  width: 16px; 
-  height: 15px; 
-  border: 2px solid #212121; 
-  border-radius: 2px; 
-  margin-right: 8px; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center;
-  background-image: url(../../images/icons.svg#icon-check);
+.icon-agree{
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .checkbox-agree .agree-icon{ 
-  fill: transparent; 
+    fill: transparent; 
 }
 
 .check-line input:checked + .checkbox-agree .icon-wrapper{ 
-  background-color: #2196f3; 
-  border: none; 
+    background-color: #2196f3; 
+    border: none; 
 }
 
 .check-line input:checked + .checkbox-agree .agree-icon{ 
-  fill: #ffffff; 
-}
-
-.link-contract{ 
-  color: #2196f3; 
-  margin-left: 5px; 
+    fill: #ffffff;
+  
+    background-image: url(../../images/icon-check.svg);
+    background-color: var(--hover-color);
+    fill: var(--hover-color);
+    background-size: contain;
+    border-color: transparent;
+    background-origin: border-box; 
 }

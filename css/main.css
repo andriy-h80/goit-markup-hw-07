@@ -343,28 +343,45 @@ li {
 
 .close {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 0px;
+  right: 0px;
   width: 30px;
   height: 30px;
   fill: var(--name-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  background-image: url(../images/Close-X.svg);
   padding: 6px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   cursor: pointer;
 }
-
 .close:hover {
-  fill: var(--hover-color);
+  background-image: url(../images/Close-X-hover.svg);
 }
 
 .close-button {
-  position: absolute;
   top: 8px;
   right: 8px;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 30px;
+  min-height: 30px;
+  fill: currentColor;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 50%;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form {
@@ -462,6 +479,7 @@ textarea:hover {
 .contract {
   color: var(--hover-color);
   position: relative;
+  margin-left: 5px;
 }
 
 .contract::before {
@@ -471,7 +489,7 @@ textarea:hover {
   height: 1px;
   position: absolute;
   right: 0;
-  bottom: 2px;
+  bottom: 6px;
   background-color: var(--hover-color);
 }
 
@@ -511,10 +529,12 @@ textarea:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.icon-wrapper {
-  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  padding-left: 12px;
 }
 
 .checkbox-agree .icon-wrapper {
@@ -532,7 +552,16 @@ textarea:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url(../../images/icons.svg#icon-check);
+}
+
+.icon-agree {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  left: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .checkbox-agree .agree-icon {
@@ -546,11 +575,12 @@ textarea:hover {
 
 .check-line input:checked + .checkbox-agree .agree-icon {
   fill: #ffffff;
-}
-
-.link-contract {
-  color: #2196f3;
-  margin-left: 5px;
+  background-image: url(../../images/icon-check.svg);
+  background-color: var(--hover-color);
+  fill: var(--hover-color);
+  background-size: contain;
+  border-color: transparent;
+  background-origin: border-box;
 }
 
 .advantage__name:not(:last-child) {

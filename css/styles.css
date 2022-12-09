@@ -581,9 +581,20 @@ textarea:hover{
   border-color: var(--hover-color);
 }
 
-/* .check-line { 
+.check-line { 
   margin: 10px 0; 
 } 
+
+.checkbox-agree{
+  display: flex; 
+  align-items: center; 
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  padding-left: 12px;
+}
 
 .checkbox-agree .icon-wrapper { 
   width: 16px; 
@@ -595,29 +606,48 @@ textarea:hover{
   align-items: center; 
   justify-content: center; 
 } 
+
+.icon-agree{
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .checkbox-agree .agree-icon { 
   fill: transparent; 
 } 
+
 .check-line input:checked + .checkbox-agree .icon-wrapper { 
   background-color: #2196f3; 
   border: none; 
 } 
-.check-line input:checked + .checkbox-agree .agree-icon { 
-  fill: #ffffff; 
-} 
-.link-contract { 
-  color: #2196f3; 
-  margin-left: 5px; 
-}  */
 
+.check-line input:checked + .checkbox-agree .agree-icon { 
+  fill: #ffffff;
+
+  background-image: url(../images/icon-check.svg);
+  background-color: var(--hover-color);
+  fill: var(--hover-color);
+  background-size: contain;
+  border-color: transparent;
+  background-origin: border-box; 
+} 
+
+
+
+/* Початок мого чексбоксу */
+/* 
 .checkbox{
   position: relative;
-}
+} */
 
-.checkbox-input{
+.checkbox__input{
   /* -webkit-appearance: none;
   appearance: none; */
-  
+
   position: absolute;
   width: 1px;
   height: 1px;
@@ -629,8 +659,8 @@ textarea:hover{
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.checkbox-terms{
+/* 
+.checkbox__terms{
   position: absolute;
   width: 16px;
   height: 15px;
@@ -639,8 +669,8 @@ textarea:hover{
   transform: translateY(-50%);
 }
 
-.checkbox-input:checked + .checkbox-terms{
-  background-image: url(/images/icon-check.svg);
+.checkbox__input:checked + .checkbox__terms{
+  background-image: url(../images/icon-check.svg);
   background-color: var(--hover-color);
   fill: var(--hover-color);
   background-size: contain;
@@ -657,11 +687,15 @@ textarea:hover{
   line-height: 1.71;
   letter-spacing: 0.03em;
   padding-left: 36.38px;
-}
+} */
+
+/* Кінець мого чекбоксу */
+
 
 .contract{
   color: var(--hover-color);
   position: relative;
+  margin-left: 5px; 
 }
 
 .contract::before{
@@ -671,7 +705,7 @@ textarea:hover{
   height: 1px;
   position: absolute;
   right: 0;
-  bottom: 2px;
+  bottom: 6px;
   background-color: var(--hover-color);
 }
 
